@@ -29,7 +29,6 @@ module GCD	#(parameter LENGTH = 1)		//default the two numbers' length are 1
 	
 	assign out_num = reg_out;
 	
-	
 	//this function is used to sort two input numbers
 	//output : bigger is left(MSB), smaller is right(LSB)
 	function [LENGTH * 2 - 1 : 0] SWAP;
