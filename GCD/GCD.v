@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////
-///		This module is a top module			  		///
-///													///
+///		This module is a top module	    ///
+///						    ///
 ///////////////////////////////////////////////////////
 
 /* 	This module is used to find a greatest common divisor between two numbers.
@@ -8,13 +8,13 @@
  * 	By Euclidean algorithm
  * 
  * 	for example
- * 		 1.	num1=96			 , num2=40
+ * 		 1.	num1=96		 , num2=40
  * 		 2.	num1=num1-num2=56, num2=40
  * 		 3.	num1=nun1-num2=16, num2=40
- * 		 4.	num1=40			 , num2=16	//swap
+ * 		 4.	num1=40		 , num2=16	//swap
  * 		 5.	num1=nun1-num2=24, num2=16
  * 		 6.	num1=nun1-num2=8 , num2=16
- * 		 7.	num1=16			 , num2=8	//swap
+ * 		 7.	num1=16		 , num2=8	//swap
  * 		 8.	num1=nun1-num2=8 , num2=8
  * 		 9.	num1=nun1-num2=0 , num2=8
  * 		10.	GCD=num2=8
@@ -25,7 +25,7 @@ module GCD	#(parameter LENGTH = 1)		//default the two numbers' length are 1
 	input	[LENGTH - 1 : 0]	in_num1, in_num2;
 	output	[LENGTH - 1 : 0]	out_num;
 	
-	reg	 [LENGTH - 1 : 0]	reg_num1, reg_num2, reg_out;
+	reg	[LENGTH - 1 : 0]	reg_num1, reg_num2, reg_out;
 	
 	assign out_num = reg_out;
 	
