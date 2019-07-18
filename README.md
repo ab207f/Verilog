@@ -1,4 +1,5 @@
-# Verilog
+# Verilog  
+## Online Verilog editor  
+1. [EDA Playground](https://www.edaplayground.com/)  
 
-This repository places my Verilog code which I have programed.
 
