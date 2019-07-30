@@ -55,4 +55,8 @@ module GCD	#(parameter LENGTH = 1)		//default the two numbers' length are 1
 		
 		reg_out = reg_num2;	//GCD
 	end
+	
+	initial begin
+		$display("<< In GCD module >> : in_num1=%5d, in_num2=%5d, out_num=%5d\n", in_num1, in_num2, out_num);
+	end
 endmodule
