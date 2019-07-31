@@ -12,10 +12,10 @@ module tb_GCD;
 	
 	GCD#(32) gcd_unit( .in_num1(inA), .in_num2(inB), .out_num(out));
 	
-
+	//This block assigns values to inA and inB after reading the test data
 	initial	begin
 		times = 0;
-		fp_r = $fopen("tb_file/GCD_test.txt", "r");
+		fp_r = $fopen("tb_file/GCD_test.txt", "r");		//read test data
 		#10;
 		
 		while(!$feof(fp_r)) begin
@@ -37,18 +37,35 @@ module tb_GCD;
 
 
 /*
-		// 3 = GCD( 27, 15 )
+	//This block assigns values to inA and inB, instead of reading the data
+	initial	begin
 		inA = 27;
 		inB = 15;
+		num_gcd = 3;
 		#10;
 
-		if ( out == 3 )	begin
-			$display( "Test ( gcd(27,15) ) succeeded, [ %x == %x ]", out, 3 );
+		if ( out == num_gcd )	begin
+			$display( "Test ( gcd(27,15) ) succeeded, [ %x == %x ]", out, num_gcd );
 		end
 		else	begin
-			$display( "Test ( gcd(27,15) ) failed, [ %x != %x ]", out, 3 );
+			$display( "Test ( gcd(27,15) ) failed, [ %x != %x ]", out, num_gcd );
 		end
-*/		
+		
+		#10;
+
+		inA = 49;
+		inB = 42;
+		num_gcd = 7;
+		#10;
+
+		if ( out == num_gcd )	begin
+			$display( "Test ( gcd(49,42) ) succeeded, [ %x == %x ]", out, num_gcd );
+		end
+		else	begin
+			$display( "Test ( gcd(49,43) ) failed, [ %x != %x ]", out, num_gcd );
+		end
+*/
+
 		$finish;
 	end
 endmodule
